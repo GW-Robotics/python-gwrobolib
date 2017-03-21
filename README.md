@@ -4,11 +4,6 @@ This repository is for the source code for the robotics library created original
 [In-Progress] gwrobolib documentation can be found on its [GitHub Wiki](https://github.com/GW-Robotics/gwrobolib/wiki).
 # Installation
 [To-Do] Installation instructions can be found [here](https://github.com/GW-Robotics/gwrobolib/wiki/Installation).
-# Modules
-- `gwrobolib` - main module with actuators and general classes
-- `robotmap` - python module to easily adjust wiring assignments
-- `robotmath` - python module with common mathematical functions useful for robotics. Based off of [this class written for FRC](https://github.com/Team708/2015-Banshee/blob/master/src/org/team708/robot/util/Math708.java)
-- `sensors` - python module with sensors interfacing with the Arduino with Nanpy
 # License
 See [LICENSE.txt](https://github.com/GW-Robotics/gwrobolib/blob/master/LICENSE)
 # Contributors
