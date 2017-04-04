@@ -19,6 +19,7 @@ class LimitSwitch(object):
         Arduino.pinMode(self.pin, Arduino.INPUT)
 
     def get(self):
+	sleep(.01)
         return Arduino.digitalRead(self.pin) == Arduino.HIGH
 
 

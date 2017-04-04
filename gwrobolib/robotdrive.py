@@ -44,16 +44,24 @@ class RobotDrive(object):
                 left_motor_speed = move_value - rotate_value
                 right_motor_speed = -max(-move_value, -rotate_value)
 
-        self.left_motor1.set(left_motor_speed)
-        self.left_motor2.set(left_motor_speed)
-        self.right_motor1.set(-right_motor_speed)
-        self.right_motor2.set(-right_motor_speed)
+        self.left_motor1.set(robotmath.make_within(left_motor_speed, -1.0, 1.0))
+        self.left_motor2.set(robotmath.make_within(left_motor_speed, -1.0, 1.0))
+        self.right_motor1.set(-robotmath.make_within(right_motor_speed, -1.0, 1.0))
+        self.right_motor2.set(-robotmath.make_within(right_motor_speed, -1.0, 1.0))
         self.strafe_motor.set(strafe_value)
 
-        
+    
     def stop(self):
         self.left_motor1.set(0.0)
         self.left_motor2.set(0.0)
         self.right_motor1.set(0.0)
         self.right_motor2.set(0.0)
         self.strafe_motor.set(0.0)
+
+
+    def all_test(self, value):
+        self.left_motor1.set(value)
+        self.left_motor2.set(value)
+        self.right_motor1.set(value)
+        self.right_motor2.set(value)
+        self.strafe_motor.set(value)
