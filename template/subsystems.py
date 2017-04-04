@@ -1,7 +1,4 @@
-import robotmap
-import robotmath
-import sensors
-import gwrobolib
+from gwrobolib import robotmap, robotmath, sensors
 
 from nanpy import ArduinoApi, SerialManager, Servo, Ultrasonic
 from time import sleep
