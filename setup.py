@@ -4,16 +4,18 @@ except ImportError:
     from distutils.core import setup
 
 config = {
-    'description': '2017 Fire Fighter',
-    'author': 'GW Robotics',
-    'url': 'https://github.com/GW-Robotics/2017-Fire-Fighter/tree/master',
-    'download_url': 'https://github.com/GW-Robotics/2017-Fire-Fighter/tree/master',
-    'author_email': 'robotics@gwu.edu',
-    'version': '0.1',
+    'name': 'gwrobolib',
+	'version': '0.1',
+    'description': 'Robotics library to control a robot with a Raspberry Pi connected to an Arduino via serial',
+    'author': 'Nam Tran',
+    'url': 'https://github.com/GW-Robotics/gwrobolib',
+    'download_url': 'https://github.com/GW-Robotics/gwrobolib/releases',
+    'author_email': 'nam_tran@gwu.edu',
     'install_requires': ['nose'],
-    'packages': ['2017-Fire-Fighter'],
-    'scripts': [],
-    'name': '2017-Fire-Fighter'
+	'dependency_links' = ['http://github.com/GW-Robotics/nanpy/tarball/master#egg=Nanpy'],
+	'license': 'MIT'
+    'packages': ['gwrobolib'],
+    'scripts': []
 }
 
 setup(**config)
