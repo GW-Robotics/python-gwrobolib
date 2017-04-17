@@ -15,6 +15,7 @@ p.join()
 #Example Subsystem
 example_subsystem = ExampleSubsystem()
 
+# Main robot loop - will run forever
 while (True):
     # Insert subsystem commands here
     sleep(.1)
