@@ -31,7 +31,7 @@ class Motor(object):
     def set(self, speed):
         if not self.pwm == -1:
             Arduino.analogWrite(self.pwm, 255 * abs(speed))
-            
+
         if speed > 0.0:
             Arduino.digitalWrite(self.pinA, Arduino.HIGH)
             Arduino.digitalWrite(self.pinB, Arduino.LOW)
@@ -56,5 +56,3 @@ class Solenoid(object):
     def off():
         Arduino.digitalWrite(self.pinA, Arduino.LOW)
         Arduino.digitalWrite(self.pinB, Arduino.LOW)
-
-
